@@ -1,0 +1,40 @@
+@use "../utilities/all.scss" as *;
+
+.footer {
+    &__info {
+        background-color: $footer-info-bgc;
+    }
+
+    &__logos {
+        &--google {
+            @include transform(0.6);
+        }
+
+        &--united {
+            @include transform(0.75);
+        }
+    }
+
+    &__contact {
+        @include text-align(end);
+
+        a {
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        &--icons {
+            &:hover {
+                @include transform(1.2);
+                color: $primary-color;
+            }
+        }
+
+    }
+
+    &__author {
+        @include text-align(center);
+        background-color: $footer-author-bgc;
+    }
+}

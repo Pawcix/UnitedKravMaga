@@ -1,3 +1,75 @@
+@use "./components/all" as *;
+@use "./utilities/all" as *;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
 body {
-    background-color: red;
+    height: 100%;
+    background-color: blue;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ol,
+ul {
+    padding-left: 0 !important;
+}
+
+li {
+    transition: .3s;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0rem !important;
 }

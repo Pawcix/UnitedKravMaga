@@ -1,0 +1,14 @@
+@mixin transform($value) {
+    transform: scale($value);
+}
+
+@mixin text-align($value) {
+    text-align: ($value);
+}
+
+
+
+
+@mixin filter($value) {
+    filter: opacity($value);
+}

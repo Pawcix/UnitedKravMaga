@@ -1,0 +1,86 @@
+@use "../utilities/all.scss" as *;
+
+
+.navigation {
+    position: fixed;
+
+    &__view {
+        padding: 5px 20px;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        &--box:after,
+        &--box:before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+
+        &--box:before {
+            border-top: 1px solid;
+            top: -5px;
+            transform: scale(0, 1);
+        }
+
+        &--box:after {
+            border-bottom: 1px solid;
+            bottom: -5px;
+            transform: scale(0, 1);
+        }
+
+        &--box:hover:after,
+        &--box:hover:before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &__burger {
+        width: 35px;
+        height: 40px;
+
+        &--bar {
+            height: 2px;
+            margin: 6px auto;
+            background-color: $white;
+            overflow: hidden;
+            transition: .25s;
+        }
+
+        &:hover {
+            .bar:nth-child(2) {
+                margin: 10px 0px;
+            }
+        }
+    }
+
+
+    // GDY SIĘ NACIŚNIE PRZYCISK
+    .burger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    &__close {
+        #menu {
+            display: none;
+            background-color: lime;
+            padding: 20px;
+            right: 0;
+        }
+    }
+}
