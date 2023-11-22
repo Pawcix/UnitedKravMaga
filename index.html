@@ -8,6 +8,9 @@
     <!-- Bootstrap : -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 <!-- Icons -->
 <script src="https://kit.fontawesome.com/3da811e80c.js" crossorigin="anonymous"></script>
 
@@ -18,31 +21,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
+    <div class="navbar text-uppercase">
+    <div class="wrapper d-flex justify-content-between align-items-center">
+        <a class="navbar__logo" href="/"></a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <div class="navbar__icon burger-icon d-flex justify-content-between align-items-center flex-column">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
+        <ul class="navbar__list nav-list gap-3" id="nav-list">
+            <li><a href="/United Krav Maga">United Krav Maga</a></li>
+            <li><a href="/Galeria">Galeria</a></li>
+            <li><a href="/Grafik">Grafik</a></li>
+            <li><a href="/Zapisy">Zapisy</a></li>
+            <li><a href="/Kontakt">Kontakt</a></li>
+        </ul>
     </div>
-</nav>
+
+</div>
     <h1 style="height: 100vh;">:D</h1>
     <footer class="footer">
     <div class="footer__info py-4">
@@ -79,16 +77,18 @@
                 <div class="footer__logos d-flex justify-content-center align-items-center flex-column">
                     <a class="footer__logos footer__logos--google"
                         href="https://www.google.com/maps?sca_esv=583752159&hl=pl&output=search&q=united+krav+maga+jelenia+g%C3%B3ra&source=lnms&entry=mc&sa=X&ved=2ahUKEwjQy67F7s-CAxU2SPEDHSGXD7UQ0pQJegQIChAB"
-                        target="_blank"><img src="/dist/img/Krav Maga - Opinie.png"
-                            alt="Logo Google który posiada ocenę 5.0 i ponad 20 opini">
+                        target="_blank"><img src="/dist/img/KravMagaOpinie.png"
+                            alt="Logo Google który posiada ocenę 5.0 i ponad 20 opini" />
                     </a>
                     <a class="footer__logos footer__logos--united" href="/">
-                        <img src="/dist/img/United Krav Maga - Logo.png" alt="Logo United Krav Maga World Organization">
+                        <img src="/dist/img/UnitedKravMagaLogo.png"
+                            alt="Logo United Krav Maga World Organization" />
                     </a>
                 </div>
             </div>
             <div class="footer__boxes col-12 col-lg-4">
-                <div class="footer__contact d-flex flex-column gap-1 justify-content-lg-end justify-content-center align-items-lg-end align-items-center">
+                <div
+                    class="footer__contact d-flex flex-column gap-1 justify-content-lg-end justify-content-center align-items-lg-end align-items-center">
                     <h3>Kontakt :</h3>
                     <a href="tel:+48 570 7566 571">+48 570 7566 571</a>
                     <a href="https://maps.app.goo.gl/dswRwKm4kdGzZxgH8" target="_blank">1 Maja 31, 58-500 Jelenia
@@ -109,18 +109,19 @@
     </div>
     <div class="footer__author py-3 col-12">
         <div class="wrapper d-flex justify-content-center align-items-center">
-            <span>Copyright &copy; Paweł Szatanik | Wszelkie prawa zastrzeżone | <span
-                    class="footer-years"></span></span>
+            <span>Copyright &copy; Paweł Szatanik | Wszelkie prawa zastrzeżone |
+                <span class="footer-years"></span></span>
         </div>
     </div>
 </footer>
     <!-- Bootstrap : -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 
 <!-- Scripts -->
+<script src="/dist/js/menu.min.js"></script>
 <script src="/dist/js/years.min.js"></script>
-
-
 </body>
 
 </html>

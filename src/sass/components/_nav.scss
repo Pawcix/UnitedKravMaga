@@ -1,86 +1,43 @@
 @use "../utilities/all.scss" as *;
 
 
-.navigation {
-    position: fixed;
+.navbar {
+    @include position(fixed);
+    @include font-size(18px);
+    @include width(100%);
+    @include background($nav-bgc);
+    @extend .z-index !optional;
 
-    &__view {
-        padding: 5px 20px;
+    &__logo {
+        @include size(400px, 90px);
+        @include img-size("/dist/img/UnitedKravMagaLogo.png", 0.75, -60px);
     }
 
-    &__wrapper {
-        position: relative;
+    &__list {
+        @include display(flex);
 
-        &--box:after,
-        &--box:before {
-            content: '';
-            position: absolute;
-            display: inline-block;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.35s, transform 0.35s;
-        }
+        li {
+            a {
+                @include color($white);
 
-        &--box:before {
-            border-top: 1px solid;
-            top: -5px;
-            transform: scale(0, 1);
-        }
-
-        &--box:after {
-            border-bottom: 1px solid;
-            bottom: -5px;
-            transform: scale(0, 1);
-        }
-
-        &--box:hover:after,
-        &--box:hover:before {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    &__burger {
-        width: 35px;
-        height: 40px;
-
-        &--bar {
-            height: 2px;
-            margin: 6px auto;
-            background-color: $white;
-            overflow: hidden;
-            transition: .25s;
-        }
-
-        &:hover {
-            .bar:nth-child(2) {
-                margin: 10px 0px;
+                &:hover {
+                    @include color($primary-color)
+                }
             }
         }
     }
 
-
-    // GDY SIĘ NACIŚNIE PRZYCISK
-    .burger.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
+    &__toggle {
+        @include display(none);
     }
 
-    .burger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
+    &__icon {
+        @include size(40px, 35px);
 
-    .burger.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    &__close {
-        #menu {
-            display: none;
-            background-color: lime;
-            padding: 20px;
-            right: 0;
+        .bar {
+            @include size(40px, 3px);
+            @include background($white);
+            @include margin(3px, 0px, 3px, 0px);
         }
     }
 }

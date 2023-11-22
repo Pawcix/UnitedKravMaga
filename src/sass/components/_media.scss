@@ -1,7 +1,60 @@
+@use "../utilities/all.scss" as *;
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        @include font-size(26px);
+        @include position(fixed);
+        background: transparent;
+
+        &__logo {
+            @include size(120px, 90px);
+            @include img-size("/dist/img/UnitedKravMagaIcon.png", 0.75, -20px);
+            z-index: 1;
+        }
+
+        &__list {
+            @include size(100%, 100vh);
+            @include background($nav-mobile-bgc);
+            @include position(absolute);
+            @include position-box(none, center,center, column);
+            @include trbl(0px, 0px, 0px, 0px);
+        }
+
+        &__toggle {
+            @include display(block);
+            z-index: 1;
+        }
+
+        &__list {
+            li {
+                @include margin(0px, 0px, 0px, 0px);
+                text-align: center;
+            }
+        }
+
+        .show {
+            @include display(flex);
+        }
+
+        .burger-icon.active .bar:nth-child(1) {
+            @include transform-r-t(-45deg, -6px, 7px);
+            @include background($primary-color);
+        }
+
+        .burger-icon.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-icon.active .bar:nth-child(3) {
+            @include transform-r-t(45deg, -6px, -7px);
+        }
+    }
+}
+
 @media (max-width:991px) {
     .footer {
         &__boxes {
-            margin: 10px 0;
+            @include margin(10px, 0px, 10px ,0px);
         }
     }
 }

@@ -1,14 +1,69 @@
-@mixin transform($value) {
-    transform: scale($value);
+@mixin display($v) {
+    display: ($v);
 }
 
-@mixin text-align($value) {
-    text-align: ($value);
+@mixin position($v) {
+    position: ($v);
 }
 
+@mixin width($v) {
+    width: ($v);
+}
 
+@mixin font-size($v1) {
+    font-size: ($v1);
+}
 
+@mixin background($v) {
+    background-color: ($v);
+}
 
-@mixin filter($value) {
-    filter: opacity($value);
+@mixin color($v) {
+    color: ($v);
+}
+
+@mixin transform($v) {
+    transform: scale($v);
+}
+
+@mixin filter($v) {
+    filter: opacity($v);
+}
+
+@mixin text-align($v) {
+    text-align: ($v);
+}
+
+@mixin size($v1, $v2) {
+    width: ($v1);
+    height: ($v2);
+}
+
+@mixin transform-r-t($v1, $v2, $v3) {
+    transform: rotate(($v1)) translate($v2, $v3);
+}
+
+@mixin trbl($v1, $v2, $v3, $v4) {
+    top: ($v1);
+    right: ($v2);
+    bottom: ($v3);
+    left: ($v4);
+}
+
+@mixin margin($v1, $v2, $v3, $v4) {
+    margin: ($v1)($v2)($v3)($v4);
+}
+
+@mixin img-size($v1, $v2, $v3) {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url($v1);
+    transform: scale($v2) translateX($v3);
+}
+
+@mixin position-box($v1, $v2, $v3, $v4) {
+    display: ($v1);
+    justify-content: ($v2);
+    align-items: ($v3);
+    flex-direction: ($v4);
 }
