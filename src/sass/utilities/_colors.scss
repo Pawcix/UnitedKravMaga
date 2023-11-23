@@ -1,11 +1,26 @@
 $white:#ffffff;
 $black:#000000;
 
+$primary-color:#00aeef;
+
+// Navigation :
 $nav-bgc:#020202cb;
 $nav-mobile-bgc:#020202d9;
-$primary-color:#00aeef;
+
+// Backgroudn-Heading :
+$heading-bgc: linear-gradient(0deg, rgba(0,124,170,1) 0%, rgba(0,174,239,1) 100%);
+
+// White-section : 
+$section-bgc: #d9d9d9;
+
+// Footer :
 $footer-info-bgc:#070707;
 $footer-author-bgc:#020202;
+
+// Shadow :
+$shadow-section-bgc: rgba(0, 0, 0, 0.15);
+
+
 
 
 $gray:#808080;

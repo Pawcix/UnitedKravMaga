@@ -25,6 +25,8 @@
         }
 
         &--icons {
+            @include font-size(36px);
+
             &:hover {
                 @include transform(1.2);
                 @include color($primary-color)

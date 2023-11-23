@@ -1,3 +1,26 @@
+@use "./mixin" as *;
+
+.section-box {
+    @include position(relative);
+    @include top(-50px);
+    @include width(100%);
+    @include background($white);
+    @include border-radius(20px);
+    @include box-shadow(5px, 5px, 5px, $shadow-section-bgc);
+    @include color($black);
+}
+
+.section-bgc {
+    @include background($section-bgc);
+}
+
+.heading {
+    @include position-center(flex, center, center);
+    @include margin(106px, 0px, 0px, 0px);
+    @include width-height(100%, 300px);
+    @include background($heading-bgc);
+}
+
 .z-index {
     z-index: 1;
 }

@@ -1,10 +1,10 @@
 @use "../utilities/all.scss" as *;
 
-
 .navbar {
     @include position(fixed);
-    @include font-size(18px);
     @include width(100%);
+    @include font-size(18px);
+    @include top(0px);
     @include background($nav-bgc);
     @extend .z-index !optional;
 
@@ -36,8 +36,8 @@
 
         .bar {
             @include size(40px, 3px);
-            @include background($white);
             @include margin(3px, 0px, 3px, 0px);
+            @include background($white);
         }
     }
 }
