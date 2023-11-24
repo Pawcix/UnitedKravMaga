@@ -1,17 +1,11 @@
-@mixin display($v) {
-    display: ($v);
+@mixin justify-align {
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin position($v) {
-    position: ($v);
-}
-
-@mixin width($v) {
-    width: ($v);
-}
-
-@mixin height($v) {
-    height: ($v);
+@mixin content-position{
+    content: '';
+    position: absolute;
 }
 
 @mixin width-height($v1, $v2) {
@@ -19,49 +13,17 @@
     height: ($v2);
 }
 
-@mixin font-size($v1) {
-    font-size: ($v1);
-}
-
-@mixin font-weight($v1) {
-    font-weight: ($v1);
-}
-
-@mixin background($v) {
-    background: ($v);
-}
-
-@mixin color($v) {
-    color: ($v);
-}
-
-@mixin transform($v) {
+@mixin transform-scale($v) {
     transform: scale($v);
 }
 
-@mixin filter($v) {
-    filter: opacity($v);
+@mixin transform-scale-X($v1){
+    transform: scaleX($v1);
 }
 
-@mixin opacity($v) {
-    opacity: ($v);
-}
-
-@mixin z-index($v) {
-    z-index: ($v);
-}
-
-@mixin text-align($v) {
-    text-align: ($v);
-}
-
-@mixin size($v1, $v2) {
+@mixin width-height($v1, $v2) {
     width: ($v1);
     height: ($v2);
-}
-
-@mixin border-radius($v1) {
-    border-radius: ($v1);
 }
 
 @mixin text-shadow($v1, $v2, $v3, $v4) {
@@ -76,23 +38,15 @@
     transform: rotate(($v1)) translate($v2, $v3);
 }
 
-@mixin trbl($v1, $v2, $v3, $v4) {
+@mixin transition($v1, $v2) {
+    transition: ($v1)($v2);
+}
+
+@mixin top-right-bottom-left($v1, $v2, $v3, $v4) {
     top: ($v1);
     right: ($v2);
     bottom: ($v3);
     left: ($v4);
-}
-
-@mixin top($v1) {
-    top: ($v1);
-}
-
-@mixin left($v1) {
-    left: ($v1);
-}
-
-@mixin margin($v1, $v2, $v3, $v4) {
-    margin: ($v1)($v2)($v3)($v4);
 }
 
 @mixin img-size($v1, $v2, $v3) {
@@ -102,15 +56,21 @@
     transform: scale($v2) translateX($v3);
 }
 
-@mixin position-box($v1, $v2, $v3, $v4) {
+@mixin display-justify-align-flex($v1, $v2, $v3, $v4) {
     display: ($v1);
     justify-content: ($v2);
     align-items: ($v3);
     flex-direction: ($v4);
 }
 
-@mixin position-center($v1, $v2, $v3) {
+@mixin display-justify-align($v1, $v2, $v3) {
     display: ($v1);
     justify-content: ($v2);
     align-items: ($v3);
+}
+
+@mixin display-justify-flex($v1, $v2, $v3) {
+    display: ($v1);
+    justify-content: ($v2);
+    flex-direction: ($v3);
 }

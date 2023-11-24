@@ -1,42 +1,109 @@
 @use "../utilities/all.scss" as *;
 
 .footer {
+    a {
+        color: $white;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
     &__info {
-        @include background($footer-info-bgc);
+        padding: 25px 0;
+        background-color: $footer-info-bgc;
+    }
+
+    &__box {
+        @include display-justify-align-flex(flex, space-between, center, row);
+    }
+
+    &__menu {
+        display: flex;
+        @include display-justify-align-flex(flex, flex-start, flex-start, column);
+        gap: 5px;
+        font-size: 18px;
     }
 
     &__logos {
+        @include display-justify-align-flex(flex, center, center, column);
+
         &--google {
-            @include transform(0.6);
+            @include transform-scale(0.6);
         }
 
         &--united {
-            @include transform(0.75);
+            @include transform-scale(0.75);
         }
     }
 
     &__contact {
-        @include text-align(end);
-
-        a {
-            &:hover {
-                @include color($primary-color)
-            }
-        }
+        @include display-justify-align-flex(flex, flex-end, flex-end, column);
+        text-align: end;
+        gap: 5px;
+        transition: all .3s;
 
         &--icons {
-            @include font-size(36px);
+            font-size: 36px;
 
             &:hover {
-                @include transform(1.2);
-                @include color($primary-color)
+                color: $primary-color;
+                @include transform-scale(1.2);
             }
         }
-
     }
 
     &__author {
-        @include text-align(center);
-        @include background($footer-author-bgc)
+        padding: 15px 0;
+        text-align: center;
+        color: $white;
+        background-color: $footer-author-bgc;
+
+        &--author {
+            @include display-justify-align(flex, center, center);
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width:1000px) {
+        .footer {
+            &__box {
+                flex-direction: column;
+                gap: 20px 0;
+            }
+
+            &__menu {
+                @include justify-align;
+            }
+
+            &__contact {
+                @include justify-align;
+            }
+
+            &__author {
+                &--author {
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:450px) {
+        .footer {
+            &__author {
+                &--author {
+                    span {
+                        [data-author='author'] {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

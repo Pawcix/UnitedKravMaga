@@ -1,0 +1,75 @@
+@use "../utilities/all.scss" as *;
+
+.contact {
+    &__box {
+        @include display-justify-align-flex(flex, center, center, row);
+    }
+
+    &__data {
+        @include display-justify-flex(flex, center, column);
+        gap: 35px;
+
+        .button {
+            @include display-justify-align(flex, flex-start, center);
+            gap: 20px;
+        }
+    }
+
+    &__boxes {
+        @include display-justify-flex(flex, flex-start, column);
+
+        span {
+            padding: 3px 0;
+
+            a {
+                position: relative;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary-color;
+                }
+
+                &:after {
+                    @include content-position;
+                    bottom: -5px;
+                    left: 0;
+                    @include width-height(100%, 3px);
+                    @include transform-scale-X(0);
+                    transform-origin: right;
+                    background-color: $primary-color;
+                    transition: transform .5s;
+                }
+
+                &:hover:after {
+                    @include transform-scale-X(1);
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+
+    &__map {
+        @include display-justify-flex(flex, center, center);
+        height: 294px;
+        border-radius: 10px;
+        border: 10px double $primary-color;
+        overflow: hidden;
+    }
+
+    @media (max-width:1000px) {
+        .contact {
+            &__box {
+                flex-direction: column;
+                gap: 35px;
+            }
+
+            &__data {
+                gap: 25px;
+                
+                .button {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

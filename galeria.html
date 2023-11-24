@@ -10,34 +10,37 @@
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <!-- Icons -->
 <script src="https://kit.fontawesome.com/3da811e80c.js" crossorigin="anonymous"></script>
 
 <!-- Styles -->
-<link rel="stylesheet" href="/dist/css/main.min.css">
+<link rel="stylesheet" href="dist/css/main.min.css">
 
 
 </head>
 
 <body>
-    <div class="navbar navbar-bgc text-uppercase">
-    <div class="wrapper d-flex justify-content-between align-items-center">
-        <a class="navbar__logo" href="/"></a>
-        <div class="navbar__toggle" id="mobile-menu">
-            <div class="navbar__icon burger-icon d-flex justify-content-between align-items-center flex-column">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+    <div class="navbar navbar-bgc">
+    <div class="wrapper">
+        <div class="navbar__box">
+            <a class="navbar__logo" href="/"></a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <div class="navbar__icon burger-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </div>
+            <ul class="navbar__list nav-list" id="nav-list">
+                <li><a href="index.html">United Krav Maga</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="grafik.html">Grafik</a></li>
+                <li><a href="zapisy.html">Zapisy</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
         </div>
-        <ul class="navbar__list nav-list gap-3" id="nav-list">
-            <li><a href="index.html">United Krav Maga</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="grafik.html">Grafik</a></li>
-            <li><a href="zapisy.html">Zapisy</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
     </div>
 </div>
     <section class="gallery">
@@ -100,73 +103,69 @@
         </div>
     </section>
     <footer class="footer">
-    <div class="footer__info py-4">
-        <div class="wrapper d-flex justify-content-between align-items-center flex-lg-row flex-column">
-            <div class="footer__boxes col-12 col-lg-4">
-                <div class="footer__menu">
-                    <ul
-                        class="d-flex flex-column gap-1 justify-content-lg-start justify-content-center align-items-lg-start align-items-center">
-                        <a href="/Krav Maga Kids">
-                            <li>Krav Maga Kids</li>
+    <div class="footer__info ">
+        <div class="wrapper">
+            <div class="footer__box">
+                <div class="footer__boxes col-12 col-lg-4">
+                    <ul class="footer__menu">
+                        <h3>Menu :</h3>
+                        <a href="index.html">
+                            <li>Unied Krav Maga</li>
                         </a>
-                        <a href="/Dla Młodzieży">
-                            <li>Dla Młodzieży</li>
-                        </a>
-                        <a href="/Dla Kobiet">
-                            <li>Dla Kobiet</li>
-                        </a>
-                        <a href="/Galeria">
+                        <a href="galeria.html">
                             <li>Galeria</li>
                         </a>
-                        <a href="/Grafik">
+                        <a href="grafik.html">
                             <li>Grafik</li>
                         </a>
-                        <a href="/Zapisy">
+                        <a href="zapisy.html">
                             <li>Zapisy</li>
                         </a>
-                        <a href="/Kontakt">
+                        <a href="kontakt.html">
                             <li>Kontakt</li>
                         </a>
                     </ul>
                 </div>
-            </div>
-            <div class="footer__boxes col-12 col-lg-4">
-                <div class="footer__logos d-flex justify-content-center align-items-center flex-column">
-                    <a class="footer__logos footer__logos--google"
-                        href="https://www.google.com/maps?sca_esv=583752159&hl=pl&output=search&q=united+krav+maga+jelenia+g%C3%B3ra&source=lnms&entry=mc&sa=X&ved=2ahUKEwjQy67F7s-CAxU2SPEDHSGXD7UQ0pQJegQIChAB"
-                        target="_blank"><img src="/dist/img/KravMagaOpinie.png"
-                            alt="Logo Google który posiada ocenę 5.0 i ponad 20 opini" />
-                    </a>
-                    <a class="footer__logos footer__logos--united" href="/">
-                        <img src="/dist/img/UnitedKravMagaLogo.png" alt="Logo United Krav Maga World Organization" />
-                    </a>
+                <div class="footer__boxes col-12 col-lg-4">
+                    <div class="footer__logos">
+                        <a class="footer__logos footer__logos--google"
+                            href="https://www.google.com/maps?sca_esv=583752159&hl=pl&output=search&q=united+krav+maga+jelenia+g%C3%B3ra&source=lnms&entry=mc&sa=X&ved=2ahUKEwjQy67F7s-CAxU2SPEDHSGXD7UQ0pQJegQIChAB"
+                            target="_blank"><img src="/dist/img/KravMagaOpinie.png"
+                                alt="Logo Google który posiada ocenę 5.0 i ponad 20 opini" />
+                        </a>
+                        <a class="footer__logos footer__logos--united" href="/">
+                            <img src="/dist/img/UnitedKravMagaLogo.png"
+                                alt="Logo United Krav Maga World Organization" />
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer__boxes col-12 col-lg-4">
-                <div
-                    class="footer__contact d-flex flex-column gap-1 justify-content-lg-end justify-content-center align-items-lg-end align-items-center">
-                    <h3>Kontakt :</h3>
-                    <a href="tel:+48 570 7566 571">+48 570 7566 571</a>
-                    <a href="https://maps.app.goo.gl/dswRwKm4kdGzZxgH8" target="_blank">1 Maja 31, 58-500 Jelenia
-                        Góra</a>
-                    <a href="mailto:kontakt@unitedkravmagajeleniagora.com.pl?Subject=Wiadomość%20ze%20strony%20United Krav Maga Jelenia Góra"
-                        target="_blank">kontakt@unitedkravmagajeleniagora.com.pl</a>
-                    <div class="d-flex justify-content-end gap-3 my-2">
-                        <a href="https://www.facebook.com/profile.php?id=100076212902898" target="_blank">
-                            <i class="footer__contact footer__contact--icons transition fa-brands fa-facebook"
-                                alt="Ikona Facebook"></i></a>
-                        <a href="https://www.instagram.com/unitedkravmagajelenia/" target="_blank">
-                            <i class="footer__contact footer__contact--icons transition fa-brands fa-instagram"
-                                alt="Ikona Instagram"></i></a>
+                <div class="footer__boxes col-12 col-lg-4">
+                    <div class="footer__contact">
+                        <h3>Kontakt :</h3>
+                        <a href="tel:+48 570 7566 571">+48 570 7566 571</a>
+                        <a href="https://maps.app.goo.gl/dswRwKm4kdGzZxgH8" target="_blank">1 Maja 31, 58-500 Jelenia
+                            Góra</a>
+                        <a href="mailto:kontakt@unitedkravmagajeleniagora.com.pl?Subject=Wiadomość%20ze%20strony%20United Krav Maga Jelenia Góra"
+                            target="_blank">kontakt@unitedkravmagajeleniagora.com.pl</a>
+                        <div class="d-flex justify-content-end gap-3 my-2">
+                            <a href="https://www.facebook.com/profile.php?id=100076212902898" target="_blank">
+                                <i class="footer__contact footer__contact--icons transition fa-brands fa-facebook"
+                                    alt="Ikona Facebook"></i></a>
+                            <a href="https://www.instagram.com/unitedkravmagajelenia/" target="_blank">
+                                <i class="footer__contact footer__contact--icons transition fa-brands fa-instagram"
+                                    alt="Ikona Instagram"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer__author py-3 col-12">
-        <div class="wrapper d-flex justify-content-center align-items-center">
-            <span>Copyright &copy; Paweł Szatanik | Wszelkie prawa zastrzeżone |
-                <span class="footer-years"></span></span>
+    <div class="footer__author col-12">
+        <div class="wrapper">
+            <div class="footer__author--author">
+                <span>Copyright &copy; Paweł Szatanik |<span data-author="author"> Wszelkie prawa zastrzeżone |
+                        <span class="footer-years"></span></span></span>
+            </div>
         </div>
     </div>
 </footer>
@@ -176,9 +175,9 @@
     crossorigin="anonymous"></script>
 
 <!-- Scripts -->
-<script src="/dist/js/menu.min.js"></script>
-<script src="/dist/js/years.min.js"></script>
-<script src="/dist/js/bgc.min.js"></script>
+<script src="dist/js/menu.min.js"></script>
+<script src="dist/js/years.min.js"></script>
+<script src="dist/js/bgc.min.js"></script>
 </body>
 
 </html>

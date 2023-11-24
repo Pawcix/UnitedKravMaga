@@ -12,10 +12,9 @@
 html,
 body {
     height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: $text-color;
     background-color: $footer-info-bgc;
-    color: white;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
 }
 
 html {
@@ -26,8 +25,9 @@ html {
 }
 
 a {
-    color: $white;
     text-decoration: none;
+    color: $white;
+    color: ($text-color);
     transition: all .3s;
 }
 
@@ -77,9 +77,65 @@ ul {
 
 // HEADING :
 
+span {
+    font-size: 18px;
+
+    @media (max-width:1000px) {
+        font-size: 16px;
+    }
+}
+
 h2 {
-    @include font-weight(600);
-    @include font-size(50px);
-    @include text-shadow(2px, 2px, 5px, black);
     margin-bottom: 55px;
+    font-weight: 600;
+    font-size: 50px;
+    color: $white;
+    @include text-shadow(2px, 2px, 5px, black);
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 600;
+    color: $primary-color;
+
+    @media (max-width:1000px) {
+        font-size: 24px;
+    }
+}
+
+// Button :
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $white;
+    border-radius: 8px;
+    border: 2px solid $primary-color;
+    background-color: $primary-color;
+    @include transition (all, .3s);
+
+    &:hover {
+        color: $primary-color;
+        background-color: $white;
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 1000px) {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+.reverse {
+    color: $primary-color;
+    background-color: transparent;
+
+    &:hover {
+        color: $white;
+        background-color: $primary-color;
+        transform: scale(1.1);
+    }
 }

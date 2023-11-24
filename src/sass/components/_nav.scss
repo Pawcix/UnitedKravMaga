@@ -1,43 +1,100 @@
 @use "../utilities/all.scss" as *;
 
 .navbar {
-    @include position(fixed);
-    @include width(100%);
-    @include font-size(18px);
-    @include top(0px);
-    @include background($nav-bgc);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 18px;
+    background-color: $nav-bgc;
     @extend .z-index !optional;
 
     &__logo {
-        @include size(400px, 90px);
+        @include width-height(400px, 90px);
         @include img-size("/dist/img/UnitedKravMagaLogo.png", 0.75, -60px);
     }
 
+    &__box {
+        @include display-justify-align(flex, space-between, center);
+    }
+
     &__list {
-        @include display(flex);
+        display: flex;
+        gap: 20px;
 
         li {
             a {
-                @include color($white);
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
 
                 &:hover {
-                    @include color($primary-color)
+                    color: $primary-color;
                 }
             }
         }
     }
 
     &__toggle {
-        @include display(none);
+        display: none;
     }
 
     &__icon {
-        @include size(40px, 35px);
+        @include width-height(40px, 35px);
+        @include display-justify-align-flex(flex, space-between, center, column);
 
         .bar {
-            @include size(40px, 3px);
-            @include margin(3px, 0px, 3px, 0px);
-            @include background($white);
+            margin: 3px 0;
+            @include width-height(40px, 3px);
+            background-color: $white;
+        }
+    }
+
+    @media (max-width:1000px) {
+        font-size: 26px;
+        background-color: transparent;
+        z-index: 2;
+
+        &__logo {
+            @include width-height(120px, 90px);
+            @include img-size("/dist/img/UnitedKravMagaIcon.png", 0.75, -20px);
+            z-index: 1;
+        }
+
+        &__list {
+            position: absolute;
+            @include display-justify-align-flex(none, center, center, column);
+            @include width-height(100%, 100vh);
+            @include top-right-bottom-left(0px, 0px, 0px, 0px);
+            background: $nav-mobile-bgc;
+        }
+
+        &__toggle {
+            display: block;
+            z-index: 1;
+        }
+
+        &__list {
+            li {
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        .show {
+            display: flex;
+        }
+
+        .burger-icon.active .bar:nth-child(1) {
+            @include transform-r-t(-45deg, -6px, 7px);
+            background-color: $primary-color;
+        }
+
+        .burger-icon.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-icon.active .bar:nth-child(3) {
+            @include transform-r-t(45deg, -6px, -7px);
         }
     }
 }
