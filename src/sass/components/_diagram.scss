@@ -1,0 +1,82 @@
+@use "../utilities/all.scss" as *;
+
+.diagram {
+    &__box {
+        @include display-justify-flex(flex, space-between, column);
+    }
+
+    &__boxes {
+        @include display-justify-flex(flex, center, column);
+    }
+
+    &__logo {
+        @include display-justify-align(flex, center, center);
+        margin: 10px 0;
+    }
+
+    &__table {
+        @include display-justify-align-flex(flex, center, stretch, column);
+
+        &--table {
+            display: grid;
+            width: 100%;
+            gap: 20px;
+
+            table,
+            th,
+            td {
+                text-align: center;
+                padding: 10px 5px;
+                font-weight: 600;
+                border: 2px solid $primary-color;
+                color: $primary-color;
+            }
+
+            table {
+                width: 100%;
+                gap: 20px 0px;
+            }
+
+            th {
+                width: 25%;
+                font-size: 20px;
+                border: 2px solid $primary-color;
+                color: $white;
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    &__title {
+        @include display-justify-align-flex(flex, center, center, column);
+        margin: 20px 0px;
+    }
+
+    @media(max-width:1000px) {
+        &__box {
+            flex-direction: column;  
+        }
+
+        &__logo {
+            img {
+                width: 50%;
+            }
+        }
+
+        &__table {
+            &--table {
+                th {
+                    font-size: 12px;
+                }
+
+                td {
+                    font-size: 12px;
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
