@@ -3,9 +3,15 @@
     align-items: center;
 }
 
-@mixin content-position{
+@mixin content-position {
     content: '';
     position: absolute;
+}
+
+@mixin border-radius-overflow {
+    border: 10px double $primary-color;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @mixin width-height($v1, $v2) {
@@ -17,7 +23,7 @@
     transform: scale($v);
 }
 
-@mixin transform-scale-X($v1){
+@mixin transform-scale-X($v1) {
     transform: scaleX($v1);
 }
 
@@ -36,6 +42,10 @@
 
 @mixin transform-r-t($v1, $v2, $v3) {
     transform: rotate(($v1)) translate($v2, $v3);
+}
+
+@mixin transform-scale-rotate($v1, $v2) {
+    transform: scale($v1) rotate($v2);
 }
 
 @mixin transition($v1, $v2) {

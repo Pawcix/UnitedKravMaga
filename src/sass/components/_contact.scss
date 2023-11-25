@@ -51,9 +51,7 @@
     &__map {
         @include display-justify-flex(flex, center, center);
         height: 294px;
-        border-radius: 10px;
-        border: 10px double $primary-color;
-        overflow: hidden;
+        @include border-radius-overflow;
     }
 
     @media (max-width:1000px) {

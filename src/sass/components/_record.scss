@@ -1,0 +1,73 @@
+@use "../utilities/all.scss" as *;
+
+.record {
+    &__section {
+        display: grid;
+        gap: 30px;
+    }
+
+    &__img {
+        display: flex;
+        @include transition(all, .3s);
+        padding: 20px;
+
+        img {
+            @include width-height(100%, 369px);
+            @include border-radius-overflow;
+            @include transition(all, .3s);
+        }
+
+        [data-img="sample"] {
+            &:hover {
+                @include transform-scale-rotate(1.05, -5deg);
+            }
+        }
+
+        [data-img="reverse"] {
+            &:hover {
+                @include transform-scale-rotate(1.05, 5deg);
+            }
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__text {
+        @include display-justify-flex(flex, space-between, column);
+        padding: 20px;
+
+        &--boxes {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width:1000px) {
+        &__img {
+            padding: 10px;
+
+            img {
+                @include width-height(100%, 300px);
+            }
+        }
+
+        &__text {
+            padding: 10px;
+        }
+
+        &__box {
+            flex-direction: column;
+        }
+
+        &__reverse {
+            flex-direction: column;
+        }
+    }
+}

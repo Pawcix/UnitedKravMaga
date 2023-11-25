@@ -23,12 +23,29 @@
 
         li {
             a {
+                position: relative;
                 color: $white;
                 text-transform: uppercase;
                 letter-spacing: 1px;
 
                 &:hover {
                     color: $primary-color;
+                }
+
+                &:after {
+                    @include content-position;
+                    bottom: -5px;
+                    left: 0;
+                    @include width-height(100%, 3px);
+                    @include transform-scale-X(0);
+                    transform-origin: right;
+                    background-color: $primary-color;
+                    transition: transform .5s;
+                }
+
+                &:hover:after {
+                    @include transform-scale-X(1);
+                    transform-origin: left;
                 }
             }
         }
