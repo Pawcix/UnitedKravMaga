@@ -16,6 +16,11 @@
 
     &__box {
         @include display-justify-align-flex(flex, space-between, center, row);
+
+        @media (max-width:991px) {
+            flex-direction: column;
+            gap: 20px 0;
+        }
     }
 
     &__menu {
@@ -23,6 +28,10 @@
         @include display-justify-align-flex(flex, flex-start, flex-start, column);
         gap: 5px;
         font-size: 18px;
+
+        @media (max-width:991px) {
+            @include justify-align;
+        }
     }
 
     &__logos {
@@ -51,6 +60,10 @@
                 @include transform-scale(1.2);
             }
         }
+
+        @media (max-width:991px) {
+            @include justify-align;
+        }
     }
 
     &__author {
@@ -64,43 +77,14 @@
 
             span {
                 font-size: 16px;
-            }
-        }
-    }
 
-    @media (max-width:1000px) {
-        .footer {
-            &__box {
-                flex-direction: column;
-                gap: 20px 0;
-            }
-
-            &__menu {
-                @include justify-align;
-            }
-
-            &__contact {
-                @include justify-align;
-            }
-
-            &__author {
-                &--author {
-                    span {
-                        font-size: 12px;
-                    }
+                @media (max-width:991px) {
+                    font-size: 12px;
                 }
-            }
-        }
-    }
 
-    @media (max-width:450px) {
-        .footer {
-            &__author {
-                &--author {
-                    span {
-                        [data-author='author'] {
-                            display: block;
-                        }
+                [data-author='author'] {
+                    @media (max-width:450px) {
+                        display: block;
                     }
                 }
             }

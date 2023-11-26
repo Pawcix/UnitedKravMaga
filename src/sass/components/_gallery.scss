@@ -101,7 +101,7 @@
             @include border-overflow;
         }
 
-        @media(max-width:1000px) {
+        @media(max-width:991px) {
             .parent {
                 @include grid-gallery(2, 10);
             }

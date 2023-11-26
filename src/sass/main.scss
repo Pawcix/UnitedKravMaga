@@ -80,25 +80,40 @@ ul {
 span {
     font-size: 18px;
 
-    @media (max-width:1000px) {
+    @media (max-width:991px) {
         font-size: 16px;
+    }
+}
+
+h1 {
+    text-align: center;
+    @include font-weight(90px);
+    color: $white;
+    letter-spacing: 1px;
+    @include text-shadow(2px, 2px, 5px, black);
+
+    @media (max-width:991px) {
+        font-size: 70px;
+    }
+
+    @media (max-width:500px) {
+        font-size: 50px;
     }
 }
 
 h2 {
     margin-bottom: 55px;
-    font-weight: 600;
-    font-size: 50px;
+    @include font-weight(50px);
     color: $white;
     @include text-shadow(2px, 2px, 5px, black);
 }
 
 h3 {
-    font-size: 36px;
-    font-weight: 600;
+    @include font-weight(36px);
     color: $primary-color;
 
-    @media (max-width:1000px) {
+    @media (max-width:991px) {
+        text-align: center;
         font-size: 24px;
     }
 }
@@ -107,9 +122,7 @@ h3 {
 
 button {
     padding: 15px 30px;
-    font-size: 18px;
-    font-size: 18px;
-    font-weight: 600;
+    @include font-weight(18px);
     text-transform: uppercase;
     color: $white;
     border-radius: 8px;
@@ -120,10 +133,10 @@ button {
     &:hover {
         color: $primary-color;
         background-color: $white;
-        transform: scale(1.1);
+        @include transform-scale(1.1);
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 991px) {
         padding: 10px 20px;
         font-size: 16px;
     }
@@ -136,6 +149,6 @@ button {
     &:hover {
         color: $white;
         background-color: $primary-color;
-        transform: scale(1.1);
+        @include transform-scale(1.1);
     }
 }

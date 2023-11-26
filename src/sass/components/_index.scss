@@ -1,0 +1,102 @@
+@use "../utilities/all.scss" as *;
+
+.section-box {
+    display: grid;
+    gap: 20px;
+}
+
+.main {
+    &__bgc {
+        position: relative;
+        height: 100vh;
+        @include background-img("/dist/img/328928760_564228779074771_9082883059883228319_n.jpg");
+        z-index: 0;
+
+        &--dark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include width-height(100%, 100%);
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: -10;
+        }
+
+        &--heading {
+            @include display-justify-align-flex(flex, center, center, column);
+            height: 100%;
+            color: $white;
+
+            h2 {
+                @include font-weight(50px);
+                color: $primary-color;
+
+                @media (max-width:991px) {
+                    font-size: 40px;
+                }
+
+                @media (max-width:500px) {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    &__section-one {
+        @include display-justify-align-flex(flex, center, center, row);
+
+        &--logo {
+            @include display-justify-align(flex, center, center);
+            margin: 20px 0;
+
+            img {
+                @media (max-width:991px) {
+                    width: 200px;
+                }
+            }
+        }
+
+        &--content {
+            @include display-justify-align-flex(flex, center, flex-start, column);
+            gap: 20px;
+            padding: 20px;
+
+            @media (max-width:991px) {
+                @include display-justify-align-flex(flex, center, center, column);
+                padding: 10px;
+            }
+        }
+
+        @media(max-width:991px) {
+            flex-direction: column;
+        }
+    }
+
+    &__section-two {
+        @include display-justify-align-flex(flex, center, center, row-reverse);
+
+        &--content {
+            @include display-justify-align-flex(flex, center, flex-start, column);
+            gap: 20px;
+            padding: 20px;
+
+            @media (max-width:991px) {
+                @include display-justify-align-flex(flex, center, center, column);
+                padding: 10px;
+            }
+        }
+
+        &--logo {
+            @include display-justify-align(flex, center, center);
+            margin: 20px 0;
+
+            img {
+                height: 460px;
+                @include border-radius-overflow;
+            }
+        }
+
+        @media(max-width:992px) {
+            flex-direction: column;
+        }
+    }
+}

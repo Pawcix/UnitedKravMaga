@@ -27,6 +27,11 @@
     gap: 10px;
 }
 
+@mixin font-weight($v1) {
+    font-size: ($v1);
+    font-weight: 600;
+}
+
 @mixin width-height($v1, $v2) {
     width: ($v1);
     height: ($v2);
@@ -77,6 +82,12 @@
     background-position: center;
     background-repeat: no-repeat;
     transform: scale($v2) translateX($v3);
+}
+
+@mixin background-img($v1) {
+    background: url($v1);
+    background-position: center;
+    background-size: cover;
 }
 
 @mixin display-justify-align-flex($v1, $v2, $v3, $v4) {

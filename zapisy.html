@@ -18,11 +18,14 @@
 <!-- Styles -->
 <link rel="stylesheet" href="dist/css/main.min.css">
 
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 
 <body>
-    <div class="navbar navbar-bgc">
+    <div data-aos="fade-down" data-aos-duration="1000" class="navbar navbar-bgc">
     <div class="wrapper">
         <div class="navbar__box">
             <a class="navbar__logo" href="/"></a>
@@ -49,14 +52,14 @@
         </div>
         <div class="section-bgc">
             <div class="wrapper">
-                <div class="section-box">
+                <div data-aos="fade-up" data-aos-duration="1000" class="section-box">
                     <div class="record__section">
                         <div class="record__box">
                             <div class="record__img col-lg-6 col-12">
-                                <img data-img="sample" src="dist/img/z-1.jpg" alt="">
+                                <img data-img="sample" src="dist/img/z-1.jpg" alt="Zdjęcie grupy United Krav Maga">
                             </div>
                             <div class="record__text col-lg-6 col-12">
-                                <h3>Zapisy dla grup KIDS i JUNIOR :</h3>
+                                <h3>Zapisy dla grup KIDS i JUNIOR</h3>
                                 <div class="record__text--boxes">
                                     <p>“Dziecko ma prawo być sobą. Ma prawo do popełniania błędów. Ma prawo do
                                         posiadania
@@ -76,10 +79,10 @@
                         </div>
                         <div class="record__reverse">
                             <div class="record__img col-lg-6 col-12">
-                                <img data-img="reverse" src="dist/img/z-2.jpg" alt="">
+                                <img data-img="reverse" src="dist/img/z-2.jpg" alt="Zdjęcie grupy United Krav Maga">
                             </div>
                             <div class="record__text col-lg-6 col-12">
-                                <h3>Zapisy do grup KADET :</h3>
+                                <h3>Zapisy do grup KADET</h3>
                                 <div class="record__text--boxes">
                                     <p>Siła fizyczna nie jest potrzebna, żeby obronić się w momencie zagrożenia. Nie
                                         musisz mieć postury Herkulesa, żeby trenować United Krav Maga. Wewnętrzna siła
@@ -98,10 +101,10 @@
                         </div>
                         <div class="record__box">
                             <div class="record__img col-lg-6 col-12">
-                                <img data-img="sample" src="dist/img/z-3.jpg" alt="">
+                                <img data-img="sample" src="dist/img/z-3.jpg" alt="Zdjęcie grupy United Krav Maga">
                             </div>
                             <div class="record__text col-lg-6 col-12">
-                                <h3>Zapisy do grup dla kobiet :</h3>
+                                <h3>Zapisy do grup dla kobiet</h3>
                                 <div class="record__text--boxes">
                                     <p>Jest to UNIKALNE szkolenie z zakresu procedur bezpieczeństwa i samoobrony
                                         przeznaczone dla każdej kobiety bez względu na wiek, kondycję i wcześniejsze
@@ -121,10 +124,10 @@
                         </div>
                         <div class="record__reverse">
                             <div class="record__img col-lg-6 col-12">
-                                <img data-img="reverse" src="dist/img/z-4.jpg" alt="">
+                                <img data-img="reverse" src="dist/img/z-4.jpg" alt="Zdjęcie grupy United Krav Maga">
                             </div>
                             <div class="record__text col-lg-6 col-12">
-                                <h3>Zapisy dla DOROSŁYCH :</h3>
+                                <h3>Zapisy dla DOROSŁYCH</h3>
                                 <div class="record__text--boxes">
                                     <p>Siła fizyczna nie jest potrzebna, żeby obronić się w momencie zagrożenia. Kiedy
                                         ataki zaczynają przybierać na sile i częstotliwości, wywołują u młodego
@@ -222,6 +225,12 @@
 <script src="dist/js/menu.min.js"></script>
 <script src="dist/js/years.min.js"></script>
 <script src="dist/js/bgc.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 
 </html>

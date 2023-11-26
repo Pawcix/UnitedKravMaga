@@ -7,11 +7,21 @@
 
     &__boxes {
         @include display-justify-flex(flex, center, column);
+
+        @media(max-width:991px) {
+            flex-direction: column;
+        }
     }
 
     &__logo {
         @include display-justify-align(flex, center, center);
         margin: 10px 0;
+
+        img {
+            @media(max-width:991px) {
+                width: 200px;
+            }
+        }
     }
 
     &__table {
@@ -43,6 +53,34 @@
                 border: 2px solid $primary-color;
                 color: $white;
                 background-color: $primary-color;
+
+                @media(max-width:991px) {
+                    font-size: 12px;
+                }
+            }
+
+            td {
+                span {
+                    @media(max-width:991px) {
+                        font-size: 12px;
+                    }
+                }
+
+                @media(max-width:991px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &--kids {
+            @media (max-width:456px) {
+                display: block;
+            }
+        }
+
+        &--adults {
+            @media (max-width:542px) {
+                display: block;
             }
         }
     }
@@ -50,33 +88,5 @@
     &__title {
         @include display-justify-align-flex(flex, center, center, column);
         margin: 20px 0px;
-    }
-
-    @media(max-width:1000px) {
-        &__box {
-            flex-direction: column;  
-        }
-
-        &__logo {
-            img {
-                width: 50%;
-            }
-        }
-
-        &__table {
-            &--table {
-                th {
-                    font-size: 12px;
-                }
-
-                td {
-                    font-size: 12px;
-
-                    span {
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
     }
 }

@@ -1,26 +1,38 @@
 @use "./mixin" as *;
 
-.section-box {
-    position: relative;
-    top: -50px;
-    width: 100%;
-    padding: 40px 60px;
-    border-radius: 20px;
-    color:($text-color);
-    background-color: $white;
-    @include box-shadow(5px, 5px, 5px, $shadow-section-bgc);
-
-    @media (max-width:1000px) {
-        padding: 16px;
-    }
-}
-
 .section-bgc {
     background-color: $section-bgc;
 }
 
 .z-index {
     z-index: 1;
+}
+
+.bgc {
+    transition: all .3s ease;
+    background: $nav-mobile-bgc-Y !important;
+}
+
+.show {
+    @media (max-width:991px) {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+.section-box {
+    position: relative;
+    top: -50px;
+    width: 100%;
+    padding: 40px 60px;
+    border-radius: 20px;
+    color: ($text-color);
+    background-color: $white;
+    @include box-shadow(5px, 5px, 5px, $shadow-section-bgc);
+
+    @media (max-width:991px) {
+        padding: 16px;
+    }
 }
 
 .heading {
@@ -36,7 +48,7 @@
     max-width: 1400px;
     padding: 0 20px;
 
-    @media (max-width:1000px) {
+    @media (max-width:991px) {
         padding: 0 10px;
     }
 }

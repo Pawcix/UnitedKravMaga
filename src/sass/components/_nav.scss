@@ -1,16 +1,32 @@
 @use "../utilities/all.scss" as *;
 
+#nav-list {
+    @media(max-width:991px) {
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .5s, visibility .5s;
+    }
+}
+
 .navbar {
     position: fixed;
     width: 100%;
     top: 0;
     font-size: 18px;
     background-color: $nav-bgc;
+    transition: background-color 0.5s ease;
     @extend .z-index !optional;
 
     &__logo {
         @include width-height(400px, 90px);
-        @include img-size("/dist/img/UnitedKravMagaLogo.png", 0.75, -60px);
+        @include img-size("../img/UnitedKravMagaLogo.png", 0.75, -60px);
+
+        @media (max-width:991px) {
+            @include width-height(120px, 90px);
+            @include img-size("../img/UnitedKravMagaIcon.png", 0.75, -20px);
+            z-index: 1;
+        }
     }
 
     &__box {
@@ -26,6 +42,7 @@
                 position: relative;
                 color: $white;
                 text-transform: uppercase;
+                font-size: 17px;
                 letter-spacing: 1px;
 
                 &:hover {
@@ -47,72 +64,86 @@
                     @include transform-scale-X(1);
                     transform-origin: left;
                 }
+
+                @media (max-width:991px) {
+                    font-size: 26px;
+                }
+            }
+
+            @media (max-width:991px) {
+                text-align: center;
+                margin: 0;
             }
         }
-    }
 
-    &__toggle {
-        display: none;
-        padding-right: 10px;
-    }
-
-    &__icon {
-        @include width-height(40px, 35px);
-        @include display-justify-align-flex(flex, space-between, center, column);
-
-        .bar {
-            margin: 3px 0;
-            @include width-height(40px, 3px);
-            background-color: $white;
-        }
-    }
-
-    @media (max-width:1000px) {
-        font-size: 26px;
-        background-color: transparent;
-        z-index: 2;
-
-        &__logo {
-            @include width-height(120px, 90px);
-            @include img-size("/dist/img/UnitedKravMagaIcon.png", 0.75, -20px);
-            z-index: 1;
-        }
-
-        &__list {
+        @media (max-width:991px) {
             position: absolute;
             @include display-justify-align-flex(none, center, center, column);
             @include width-height(100%, 100vh);
             @include top-right-bottom-left(0px, 0px, 0px, 0px);
             background: $nav-mobile-bgc;
         }
+    }
 
-        &__toggle {
+    &__toggle {
+        display: none;
+        padding-right: 10px;
+
+        @media (max-width:991px) {
             display: block;
             z-index: 1;
         }
+    }
 
-        &__list {
-            li {
-                text-align: center;
-                margin: 0;
+    &__icon {
+        @include width-height(40px, 35px);
+        @include display-justify-align-flex(flex, space-between, flex-end, column);
+
+        .bar {
+            margin: 4px 0;
+            background-color: $white;
+            transition: transform .5s ease;
+
+            &:nth-child(1) {
+                @include width-height(40px, 3px);
+            }
+
+            &:nth-child(2) {
+                @include width-height(30px, 3px);
+                background-color: $primary-color;
+                transition: opacity .3s;
+            }
+
+            &:nth-child(3) {
+                @include width-height(40px, 3px);
             }
         }
+    }
 
-        .show {
-            display: flex;
-        }
+    @media (max-width:991px) {
+        font-size: 26px;
+        background-color: transparent;
+        z-index: 2;
+        transition: background .5s ease !important;
 
-        .burger-icon.active .bar:nth-child(1) {
-            @include transform-r-t(-45deg, -6px, 7px);
-            background-color: $primary-color;
-        }
+        .active {
+            .bar {
+                transition: transform .5s ease;
 
-        .burger-icon.active .bar:nth-child(2) {
-            opacity: 0;
-        }
+                &:nth-child(1) {
+                    @include transform-r-t(-45deg, -6px, 7px);
+                    background-color: $primary-color;
+                }
 
-        .burger-icon.active .bar:nth-child(3) {
-            @include transform-r-t(45deg, -6px, -7px);
+                &:nth-child(2) {
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+
+                &:nth-child(3) {
+                    @include transform-r-t(45deg, -6px, -7px);
+                }
+            }
         }
     }
 }
