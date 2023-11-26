@@ -9,7 +9,7 @@
     &__bgc {
         position: relative;
         height: 100vh;
-        @include background-img("/dist/img/328928760_564228779074771_9082883059883228319_n.jpg");
+        @include background-img("../img/328928760_564228779074771_9082883059883228319_n.jpg");
         z-index: 0;
 
         &--dark {
