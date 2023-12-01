@@ -2,14 +2,18 @@
 
 .section-box {
     display: grid;
-    gap: 20px;
+    gap: 100px;
+
+    @media(max-width:991px) {
+        gap: 25px;
+    }
 }
 
 .main {
     &__bgc {
         position: relative;
         height: 100vh;
-        @include background-img("../img/328928760_564228779074771_9082883059883228319_n.jpg");
+        @include background-img("../img/z-2.jpg");
         z-index: 0;
 
         &--dark {
@@ -86,17 +90,46 @@
         }
 
         &--logo {
-            @include display-justify-align(flex, center, center);
-            margin: 20px 0;
+            @include display-justify-align(flex, center, flex-end);
 
             img {
-                height: 460px;
+                height: 360px;
                 @include border-radius-overflow;
             }
         }
 
-        @media(max-width:992px) {
+        @media(max-width:991px) {
             flex-direction: column;
+        }
+    }
+
+    &__section-three {
+        &--content {
+            margin: 20px 0;
+            padding: 10px;
+
+            .swiper {
+                @include width-height(100%, 100%);
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .swiper-wrapper {
+                @include width-height(100px, 100%);
+            }
+
+            .swiper-slide {
+                @include display-justify-align-flex(flex, center, center, column);
+                padding: 20px;
+                width: 100px;
+                border-radius: 20px;
+                background-color: rgba(0, 176, 240, 0.075);
+
+                img {
+                    margin: 10px 0;
+                    width: 150px;
+                }
+            }
         }
     }
 }
