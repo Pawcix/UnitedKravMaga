@@ -46,7 +46,7 @@
                 letter-spacing: 1px;
 
                 &:hover {
-                    color: $primary-color;
+                    color: $secondary-color;
                 }
 
                 &:after {
@@ -56,7 +56,7 @@
                     @include width-height(100%, 3px);
                     @include transform-scale-X(0);
                     transform-origin: right;
-                    background-color: $primary-color;
+                    background-color: $secondary-color;
                     transition: transform .5s;
                 }
 
@@ -110,7 +110,7 @@
 
             &:nth-child(2) {
                 @include width-height(30px, 3px);
-                background-color: $primary-color;
+                background-color: $secondary-color;
                 transition: opacity .3s;
             }
 
@@ -132,7 +132,7 @@
 
                 &:nth-child(1) {
                     @include transform-r-t(-45deg, -6px, 7px);
-                    background-color: $primary-color;
+                    background-color: $secondary-color;
                 }
 
                 &:nth-child(2) {

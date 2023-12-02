@@ -9,7 +9,7 @@
 }
 
 @mixin border-radius-overflow {
-    border: 10px double $primary-color;
+    border: 5px solid $primary-color;
     border-radius: 10px;
     overflow: hidden;
 }

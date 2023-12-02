@@ -53,6 +53,8 @@
             margin: 20px 0;
 
             img {
+                width: 300px;
+
                 @media (max-width:991px) {
                     width: 200px;
                 }
@@ -93,8 +95,13 @@
             @include display-justify-align(flex, center, flex-end);
 
             img {
+                margin: 20px;
                 height: 360px;
                 @include border-radius-overflow;
+
+                @media(max-width:991px) {
+                    margin: 20px 0px;
+                }
             }
         }
 

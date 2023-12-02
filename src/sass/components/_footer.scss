@@ -5,8 +5,12 @@
         color: $white;
 
         &:hover {
-            color: $primary-color;
+            color: $secondary-color;
         }
+    }
+
+    h3 {
+        color: $secondary-color;
     }
 
     &__info {
@@ -24,14 +28,7 @@
     }
 
     &__menu {
-        display: flex;
-        @include display-justify-align-flex(flex, flex-start, flex-start, column);
-        gap: 5px;
         font-size: 18px;
-
-        @media (max-width:991px) {
-            @include justify-align;
-        }
     }
 
     &__logos {

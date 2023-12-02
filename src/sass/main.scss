@@ -27,8 +27,12 @@ html {
 a {
     text-decoration: none;
     color: $white;
-    color: ($text-color);
     transition: all .3s;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 input,
@@ -54,6 +58,12 @@ table {
 
 ul li {
     list-style: none;
+    color: $white;
+    cursor: pointer;
+
+    @media(max-width:991px) {
+        text-align: center;
+    }
 }
 
 ol,
@@ -122,8 +132,6 @@ h4 {
     margin-bottom: 0;
     color: $primary-color;
 }
-
-// Button :
 
 button {
     padding: 15px 30px;

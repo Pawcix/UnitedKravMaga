@@ -14,6 +14,10 @@
         @include display-justify-flex(flex, center, column);
         gap: 35px;
 
+        a {
+            color: $text-color;
+        }
+
         .button {
             @include display-justify-align(flex, flex-start, center);
             gap: 20px;

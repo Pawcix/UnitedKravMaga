@@ -18,6 +18,8 @@
         margin: 10px 0;
 
         img {
+            width: 300px;
+
             @media(max-width:991px) {
                 width: 200px;
             }

@@ -1,0 +1,15 @@
+@use "../utilities/all.scss" as *;
+
+.error {
+    @include display-justify-align-flex(flex, center, center, column);
+    height: 100vh;
+
+    p {
+        color: $white;
+        font-size: 40px;
+
+        @media(max-width:500px) {
+            font-size: 20px;
+        }
+    }
+}
