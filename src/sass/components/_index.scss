@@ -32,7 +32,7 @@
 
             h2 {
                 @include font-weight(50px);
-                color: $primary-color;
+                color: $secondary-color;
 
                 @media (max-width:991px) {
                     font-size: 40px;

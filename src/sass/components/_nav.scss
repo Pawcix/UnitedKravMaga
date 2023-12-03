@@ -38,6 +38,8 @@
         gap: 20px;
 
         li {
+            position: relative;
+
             a {
                 position: relative;
                 color: $white;
@@ -45,29 +47,29 @@
                 font-size: 17px;
                 letter-spacing: 1px;
 
-                &:hover {
-                    color: $secondary-color;
-                }
-
-                &:after {
-                    @include content-position;
-                    bottom: -5px;
-                    left: 0;
-                    @include width-height(100%, 3px);
-                    @include transform-scale-X(0);
-                    transform-origin: right;
-                    background-color: $secondary-color;
-                    transition: transform .5s;
-                }
-
-                &:hover:after {
-                    @include transform-scale-X(1);
-                    transform-origin: left;
-                }
-
                 @media (max-width:991px) {
                     font-size: 26px;
                 }
+            }
+
+            &:hover a {
+                color: $secondary-color;
+            }
+
+            &:after {
+                @include content-position;
+                bottom: 0px;
+                left: 0px;
+                @include width-height(100%, 3px);
+                @include transform-scale-X(0);
+                transform-origin: right;
+                background-color: $secondary-color;
+                transition: transform .5s;
+            }
+
+            &:hover:after {
+                @include transform-scale-X(1);
+                transform-origin: left;
             }
 
             @media (max-width:991px) {

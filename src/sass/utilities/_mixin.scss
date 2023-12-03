@@ -29,7 +29,7 @@
 
 @mixin font-weight($v1) {
     font-size: ($v1);
-    font-weight: 600;
+    font-family: $semibold-font;
 }
 
 @mixin width-height($v1, $v2) {
